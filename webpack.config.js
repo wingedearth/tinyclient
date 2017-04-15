@@ -1,0 +1,13 @@
+build
+coverage
+esdoc
+logs
+node_modules
+npm-debug.log
+reports
+src/external/build
+.idea
+.DS_Store
+*.sublime-workspace
+.nyc_output
+dist
