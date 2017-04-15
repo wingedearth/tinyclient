@@ -1,0 +1,19 @@
+{
+  "name": "tinyclient",
+  "version": "1.0.0",
+  "description": "a tiny client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wingedearth/tinyclient.git"
+  },
+  "author": "Andrew A. Anissi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wingedearth/tinyclient/issues"
+  },
+  "homepage": "https://github.com/wingedearth/tinyclient#readme"
+}
