@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/client/app.js',
   output: {
     publicPath: `/`,
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   plugins: [
