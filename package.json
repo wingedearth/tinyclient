@@ -4,7 +4,7 @@
   "description": "a tiny client",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js && node example/server.js --ignore reactModules"
   },
   "repository": {
     "type": "git",
