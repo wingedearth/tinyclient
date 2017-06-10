@@ -1,30 +1,66 @@
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const _ = require('lodash');
 
-module.exports = {
+config = {
   devtool: 'inline-source-map',
-  entry: './src/client/app.js',
   output: {
     publicPath: `/`,
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'build'),
+    filename: '[name].js'
   },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
-    })
-  ],
-  module: {
-    loaders: [
-      {
-        test: /\.js?/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
+  resolve: {
+    modules: [
+      path.join(__dirname, "src"),
+      "node_modules"
     ]
   },
-  target: 'node'
+  module: {
+    rules: [
+      {
+        use: 'babel-loader',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/
+      }
+    ]
+  }
 };
+
+
+
+const frontend = _.merge({}, config, {
+  entry: {
+    bundle: path.resolve(__dirname, 'src', 'client', 'app.js')
+  }
+});
+
+const backend = _.merge({}, config, {
+  entry: {
+      server: path.resolve(__dirname, 'src', 'server', 'server.js')
+    },
+    output: {
+      libraryTarget: 'commonjs2'
+    },
+    plugins: [
+      // new HtmlWebpackPlugin({
+      //   template: 'src/assets/templates/index.html'
+      // }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('development')
+      })
+    ],
+    target: 'node',
+    node: {
+      console: false,
+      global: false,
+      process: false,
+      Buffer: false,
+      __filename: false,
+      __dirname: false
+    },
+    externals: [nodeExternals()]
+});
+
+module.exports = [backend, frontend];

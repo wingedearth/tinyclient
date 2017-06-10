@@ -5,5 +5,5 @@ ReactDOM.render(
   <div>
     <p>Welcome to the Tiny Client</p>
   </div>,
-  document.getElementById('app')
+  document.getElementById('root')
 );
