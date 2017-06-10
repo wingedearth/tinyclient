@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "a tiny client",
   "scripts": {
-    "start": "rm -rf ./build && webpack --config webpack.config.js && node build/server.js --ignore reactModules"
+    "start": "rm -rf ./build && webpack --config webpack.config.js && node build/server.js --ignore reactModules",
+    "test": "mocha --compilers js:babel-core/register --recursive --reporter=nyan tests/*.js",
+    "test:coverage": "cross-env NODE_ENV=test nyc mocha --recursive --reporter=min tests",
+    "test:file": "node ./scripts/testSingleFile.js",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -15,19 +19,51 @@
     "url": "https://github.com/wingedearth/tinyclient/issues"
   },
   "homepage": "https://github.com/wingedearth/tinyclient#readme",
+  "nyc": {
+    "lines": 0,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0,
+    "exclude": [
+      ".nyc_output",
+      "build",
+      "coverage",
+      "**/node_modules/**",
+      "src/**/*-test.js",
+      "tests",
+      "webpack.config.js"
+    ],
+    "require": [
+      "babel-core/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "cache": true,
+    "check-coverage": true,
+    "all": true,
+    "sourceMap": false,
+    "instrument": false
+  },
   "dependencies": {
+    "babel-plugin-istanbul": "3.0.0",
     "babel-runtime": "6.23.0",
-    "chai": "4.0.2",
+    "chai": "3.5.0",
     "chai-enzyme": "0.7.1",
     "colors": "1.1.2",
+    "commander": "2.9.0",
     "cross-env": "5.0.1",
     "enzyme": "2.8.2",
     "eslint": "3.19.0",
+    "esprima": "4.0.0",
     "express": "4.15.2",
     "express-react-views": "0.10.2",
     "fs": "0.0.2",
     "fsevents": "1.1.1",
+    "git-rev": "0.2.1",
     "html-webpack-plugin": "2.28.0",
+    "jsonfile-promised": "0.0.1",
     "lodash": "4.17.4",
     "mocha": "3.4.2",
     "mocha-loader": "1.1.1",
@@ -35,9 +71,12 @@
     "path": "0.12.7",
     "react": "15.5.4",
     "react-dom": "15.5.4",
+    "rewire": "2.5.2",
     "sinon": "2.3.4",
     "webpack": "2.3.3",
-    "webpack-node-externals": "1.5.4"
+    "webpack-node-externals": "1.5.4",
+    "whenjs": "0.0.4",
+    "yargs": "8.0.1"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
