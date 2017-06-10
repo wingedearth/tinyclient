@@ -1,6 +1,6 @@
 {
   "name": "tinyclient",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a tiny client",
   "scripts": {
     "start": "rm -rf ./build && webpack --config webpack.config.js && node build/server.js --ignore reactModules",
