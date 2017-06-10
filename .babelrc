@@ -1,15 +1,18 @@
 {
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  },
   "plugins": [
-    [
-      "transform-runtime",
-      {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-        "moduleName": "babel-runtime"
-      }
-    ]
-  ],
+  [
+    "transform-runtime",
+    {
+      "polyfill": false,
+      "regenerator": true
+    }
+  ]
+],
   "presets": [
     "react",
     "es2015",
