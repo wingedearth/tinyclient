@@ -1,9 +1,9 @@
 import express from 'express';
-import path from 'path';
-import mainController from '../controllers/mainController';
+import root from '../controllers/root';
+import version from '../controllers/version';
 const router = express.Router({strict: true});
 
-router.get('/', mainController.root);
-router.get('/version', mainController.version);
+router.get('/', root);
+router.get('/version', version);
 
 export default router;
