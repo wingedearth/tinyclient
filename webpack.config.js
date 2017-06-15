@@ -1,20 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const _ = require('lodash');
 
-config = {
+const config = {
   devtool: 'inline-source-map',
   output: {
-    publicPath: `/`,
+    publicPath: '/',
     path: path.join(__dirname, 'build'),
     filename: '[name].js'
   },
   resolve: {
     modules: [
-      path.join(__dirname, "src"),
-      "node_modules"
+      path.join(__dirname, 'src'),
+      'node_modules'
     ]
   },
   module: {
@@ -28,8 +27,6 @@ config = {
   }
 };
 
-
-
 const frontend = _.merge({}, config, {
   entry: {
     bundle: path.resolve(__dirname, 'src', 'client', 'app.js')
@@ -38,29 +35,26 @@ const frontend = _.merge({}, config, {
 
 const backend = _.merge({}, config, {
   entry: {
-      server: path.resolve(__dirname, 'src', 'server', 'server.js')
-    },
-    output: {
-      libraryTarget: 'commonjs2'
-    },
-    plugins: [
-      // new HtmlWebpackPlugin({
-      //   template: 'src/assets/templates/index.html'
-      // }),
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('development')
-      })
-    ],
-    target: 'node',
-    node: {
-      console: false,
-      global: false,
-      process: false,
-      Buffer: false,
-      __filename: false,
-      __dirname: false
-    },
-    externals: [nodeExternals()]
+    server: path.resolve(__dirname, 'src', 'server', 'server.js')
+  },
+  output: {
+    libraryTarget: 'commonjs2'
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
+  ],
+  target: 'node',
+  node: {
+    console: false,
+    global: false,
+    process: false,
+    Buffer: false,
+    __filename: false,
+    __dirname: false
+  },
+  externals: [nodeExternals()]
 });
 
 module.exports = [backend, frontend];
