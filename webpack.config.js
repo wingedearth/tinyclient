@@ -29,7 +29,7 @@ const config = {
 
 const frontend = _.merge({}, config, {
   entry: {
-    bundle: path.resolve(__dirname, 'src', 'client', 'app.js')
+    app: path.resolve(__dirname, 'src', 'client', 'app.js')
   }
 });
 
