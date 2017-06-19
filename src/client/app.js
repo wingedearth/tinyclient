@@ -15,3 +15,7 @@ setTimeout(() => {
     document.getElementById('main')
   );
 }, 10);
+
+if (module.hot) {
+  module.hot.accept();
+}
