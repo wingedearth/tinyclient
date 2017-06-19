@@ -11,6 +11,14 @@ const finalCreateStore = compose(
  * @param {obj} initialState - passed in from app.js
  * @returns {function} buildStore
  */
-export default function (initialState) {
-  return finalCreateStore(reducers, initialState);
+export default function configureStore (initialState) {
+  const store = finalCreateStore(reducers, initialState);
+
+  if (module.hot) {
+    module.hot.accept('./reducers', () => {
+      store.replaceReducer(reducers);
+    });
+
+    return store;
+  }
 }
