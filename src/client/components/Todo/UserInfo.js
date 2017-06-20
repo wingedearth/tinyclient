@@ -31,13 +31,15 @@ class UserInfo extends React.Component {
 
   render () {
     return (
-      <li>
-        <div>username: {this.props.user.username}</div>
-        <div>id: {this.props.user.id}</div>
-        <button onClick={this.handleNewId}>Update with random ID</button>
-        <button onClick={this.handleNewIdIfOdd}>Update ID if odd</button>
-        <button onClick={this.handleNewIdAsync}>Update Async</button>
-      </li>
+      <ul>
+        <li>
+          <div>username: {this.props.user.username}</div>
+          <div>id: {this.props.user.id}</div>
+          <button onClick={this.handleNewId}>Update with random ID</button>
+          <button onClick={this.handleNewIdIfOdd}>Update ID if odd</button>
+          <button onClick={this.handleNewIdAsync}>Update Async</button>
+        </li>
+      </ul>
     );
   }
 }
