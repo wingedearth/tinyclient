@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Spectral'), local('Spectral-Regular'), url(https://fonts.gstatic.com/s/spectral/v1/He_vQncVabw6pF26p40JY3YhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+  left: 0;
+  margin: -15px 0 0 0;
+  padding: 0 0;
+}
+
+.Home {
+  font-family: 'Helvetica';
+  color: green;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #FAEBD7;
+  text-decoration: none;
+  height: 80px;
+}
+
+.navcontainer {
+  font-family: 'Spectral';
+  color: #CB4335;
+  font-size: 20px;
+  margin: 0px 10px 0 50px;
+  padding-top: 8px;
+}
+
+.content {
+  margin: 0 2%;
+  width: 100%;
+}
+
+.leftcontent {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}
+
+.rightcontent {
+  vertical-align: top;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}
