@@ -1,6 +1,6 @@
 {
   "name": "tinyclient",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "a tiny client",
   "scripts": {
     "start": "rm -rf ./build && webpack --config webpack.config.js && ENVIRONMENT=production node build/server.js",
