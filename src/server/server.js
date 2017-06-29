@@ -7,9 +7,9 @@ import webpackConfig from '../../webpack.config';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
+const conf = require('../configuration/config').default();
 const server = express();
-const defaultPort = 3000;
-const port = defaultPort;
+const port = conf.server.port;
 const compiler = webpack(webpackConfig);
 
 server.enable('strict routing');
