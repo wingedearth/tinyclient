@@ -5,6 +5,7 @@
   "scripts": {
     "start": "rm -rf ./build && webpack --config webpack.config.js && ENVIRONMENT=production node build/server.js",
     "start:dev": "rm -rf ./build && webpack --config webpack.config.js && nodemon build/server.js",
+    "changelog": "github-changes -o wingedearth -r tinyclient -a --only-merges",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter=nyan tests/*.js",
     "test:coverage": "cross-env NODE_ENV=test nyc mocha --recursive --reporter=min tests",
     "test:file": "node ./scripts/testSingleFile.js",
@@ -105,6 +106,7 @@
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-react": "7.0.1",
     "extract-text-webpack-plugin": "^2.1.2",
+    "github-changes": "^1.1.0",
     "style-loader": "^0.18.2",
     "webpack-dev-middleware": "1.10.2",
     "webpack-hot-middleware": "2.18.0"
