@@ -7,6 +7,7 @@ import actions from '../../redux/actions';
 import TextInput from '../Todo/TextInput';
 import TodoList from '../Todo/TodoList';
 import UserInfo from '../Todo/UserInfo';
+import styles from './Home.css';
 
 class Home extends React.Component {
 
@@ -21,11 +22,21 @@ class Home extends React.Component {
   }
 
   render () {
-    return (<div id="Home">
-      <h1>Tiny Client app template with React</h1>
-      <UserInfo actions={this.props.actions} user={this.props.user} />
-      <TextInput addTodo={this.props.actions.addTodo}/><br/>
-      <TodoList actions={this.props.actions} todos={this.props.todos} />
+    return (<div className='Home'>
+      <div className='navigation'>
+        <div className='navcontainer'>
+          <p>Tiny Client</p>
+        </div>
+      </div>
+      <div className='content'>
+        <div className='leftcontent'>
+          <UserInfo actions={this.props.actions} user={this.props.user} />
+          <TextInput addTodo={this.props.actions.addTodo}/><br/>
+        </div>
+        <div className='rightcontent'>
+          <TodoList actions={this.props.actions} todos={this.props.todos} />
+        </div>
+      </div>
     </div>);
   }
 }

@@ -1,0 +1,13 @@
+{
+  "environment": "production",
+  "server": {
+    "port": 5000
+  },
+  "url": {
+    "protocol": "http",
+    "hostname": "localhost",
+    "port": 5000,
+    "pathname": "",
+    "query": ""
+  }
+}

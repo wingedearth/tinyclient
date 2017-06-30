@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './css/TextInput.css';
 
 class TextInput extends React.Component {
 
@@ -26,10 +27,11 @@ class TextInput extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='TextInput'>
         <div>TextInput Component</div>
         <form onSubmit={this.handleSubmit}>
           <input
+            className='textfield'
             onChange={this.handleChange}
             placeholder='Enter some text here.'
             type='text'
