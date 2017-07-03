@@ -10,7 +10,7 @@
     "test:coverage": "cross-env NODE_ENV=test nyc mocha --recursive --reporter=min tests",
     "test:report": "cross-env NODE_ENV=test nyc mocha --recursive --reporter=min tests && open ./coverage/lcov-report/index.html",
     "test:file": "node ./scripts/testSingleFile.js",
-    "preversion": "changelog",
+    "preversion": "npm run changelog",
     "postversion": "git push && git push --tags"
   },
   "repository": {
