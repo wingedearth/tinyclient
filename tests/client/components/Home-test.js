@@ -56,5 +56,6 @@ describe('<Home />', function () {
     expect(wrapper.find('TextInput')).to.have.length(1);
     expect(wrapper.find('TodoList')).to.have.length(1);
     expect(wrapper.find('UserInfo')).to.have.length(1);
+    expect(wrapper).to.have.className('Home');
   });
 });
