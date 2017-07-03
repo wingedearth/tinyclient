@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel",
+    "import",
+    "react"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "globals": {
+    "__DEBUG__": true,
+    "__SERVER__": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "rules": {
+    "prefer-arrow-callback": 0,
+  }
+}
