@@ -8,6 +8,7 @@
     "changelog": "github-changes -o wingedearth -r tinyclient -a --only-merges && git add CHANGELOG.md && git commit -m 'update changelog'",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter=nyan tests/*.js",
     "test:coverage": "cross-env NODE_ENV=test nyc mocha --recursive --reporter=min tests",
+    "test:report": "cross-env NODE_ENV=test nyc mocha --recursive --reporter=min tests && open ./coverage/lcov-report/index.html",
     "test:file": "node ./scripts/testSingleFile.js",
     "preversion": "changelog",
     "postversion": "git push && git push --tags"
@@ -23,10 +24,10 @@
   },
   "homepage": "https://github.com/wingedearth/tinyclient#readme",
   "nyc": {
-    "lines": 0,
-    "statements": 0,
-    "functions": 0,
-    "branches": 0,
+    "lines": 10,
+    "statements": 10,
+    "functions": 10,
+    "branches": 10,
     "exclude": [
       ".nyc_output",
       "build",
@@ -35,7 +36,9 @@
       "src/**/*-test.js",
       "tests",
       "webpack.config.js",
-      "scripts"
+      "webpack",
+      "scripts",
+      "src/assets"
     ],
     "require": [
       "babel-core/register"
