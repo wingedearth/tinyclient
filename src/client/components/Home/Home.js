@@ -9,7 +9,7 @@ import TodoList from '../Todo/TodoList';
 import UserInfo from '../Todo/UserInfo';
 import styles from './Home.css';
 
-class Home extends React.Component {
+export class Home extends React.Component {
 
   static propTypes = {
     user: PropTypes.object,
