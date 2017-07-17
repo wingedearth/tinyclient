@@ -5,6 +5,8 @@ import React from 'react';
 import Home from '../../client/components/Home';
 import reducers from '../../client/redux/reducers';
 
+require('../../client/scss/main.scss');
+
 /**
  * Root controller for root router
  * @param {obj} req - request object

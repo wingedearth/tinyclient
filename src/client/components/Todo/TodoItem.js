@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './css/TodoItem.css';
+require('./css/TodoItem.scss');
 
 class TodoItem extends React.Component {
 

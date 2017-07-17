@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './css/TextInput.css';
+require('./css/TextInput.scss');
 
 class TextInput extends React.Component {
 
