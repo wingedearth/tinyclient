@@ -19,12 +19,12 @@ server.use(webpackDevMiddleware(compiler, {
 server.use(webpackHotMiddleware(compiler, {
   log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
 }));
-server.use(express.static(path.resolve(__dirname, '..')));
-server.use(express.static(path.resolve(__dirname, '..', 'assets')));
+server.use(express.static(path.resolve(__dirname, '..', '..')));
+server.use(express.static(path.resolve(__dirname, '..', '..', 'assets')));
 server.use(express.static('./build'));
 server.set('port', port);
 server.set('view engine', 'ejs');
-server.set('views', path.join(__dirname, '..', 'src', 'assets', 'templates'));
+server.set('views', path.join(__dirname, '..', '..', 'src', 'assets', 'templates'));
 require('ejs').delimiter = '%';
 
 // Attach router

@@ -1,6 +1,6 @@
 ## Change Log
 
-### upcoming (2017/07/03 06:57 +00:00)
+### v0.5.0 (2017/07/17 00:23 +00:00)
 - [#10](https://github.com/wingedearth/tinyclient/pull/10) Merge pull request #10 from wingedearth/feature/code_coverage_to_10 (@wingedearth)
 
 ### v0.4.1 (2017/07/03 06:53 +00:00)

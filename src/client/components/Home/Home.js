@@ -7,7 +7,7 @@ import actions from '../../redux/actions';
 import TextInput from '../Todo/TextInput';
 import TodoList from '../Todo/TodoList';
 import UserInfo from '../Todo/UserInfo';
-import styles from './Home.css';
+require('./Home.scss');
 
 export class Home extends React.Component {
 

@@ -1,0 +1,40 @@
+
+
+.Home {
+  font-size: 18px;
+}
+
+.navigation {
+  width: 100%;
+  // background-color: #FAEBD7;
+  background-color: blue;
+  text-decoration: none;
+  height: 80px;
+}
+
+.navcontainer {
+  font-family: 'Spectral';
+  color: #CB4335;
+  font-size: 20px;
+  margin: 0px 10px 0 50px;
+  padding-top: 8px;
+}
+
+.content {
+  margin: 0 2%;
+  width: 100%;
+}
+
+.leftcontent {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}
+
+.rightcontent {
+  vertical-align: top;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}
