@@ -1,3 +1,4 @@
+/* eslint no-process-env: 0 */
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
@@ -10,7 +11,7 @@ const config = {
   output: {
     publicPath: '/build',
     path: path.join(__dirname, 'build'),
-    filename: '[name].js'
+    filename: 'js/[name].js'
   },
   resolve: {
     modules: [
@@ -29,7 +30,8 @@ const frontend = _.merge({}, config, {
     app: [
       'react-hot-loader/patch',
       'webpack-hot-middleware/client?name=frontend',
-      './src/client/app.js'
+      './src/client/app.js',
+      './src/client/scss/main.scss'
     ]
   },
   plugins: plugins.frontend
@@ -39,7 +41,8 @@ const backend = _.merge({}, config, {
   name: 'backend',
   entry: {
     server: [
-      './src/server/server.js'
+      './src/server/server.js',
+      './src/client/scss/main.scss'
     ]
   },
   output: {
