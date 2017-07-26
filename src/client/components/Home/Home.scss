@@ -24,6 +24,24 @@
   width: 100%;
 }
 
+.banner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background: gray;
+  overflow: hidden;
+}
+
+.bannerTitle {
+  font-family: "Open Sans";
+  font-weight: 100;
+  font-size: 60px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
 .leftcontent {
   position: relative;
   display: inline-block;

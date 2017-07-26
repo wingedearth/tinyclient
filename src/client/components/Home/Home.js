@@ -9,6 +9,21 @@ import TodoList from '../Todo/TodoList';
 import UserInfo from '../Todo/UserInfo';
 require('./Home.scss');
 
+const Nav = function (props) {
+  return (<div className='navigation'>
+    <div className='navcontainer'>
+      <p>Tiny Client</p>
+    </div>
+  </div>);
+};
+
+const Banner = function (props) {
+  return (<div className='banner'>
+    <p className='bannerTitle'>Tiny Client!</p>
+  </div>);
+};
+
+
 export class Home extends React.Component {
 
   static propTypes = {
@@ -23,11 +38,8 @@ export class Home extends React.Component {
 
   render () {
     return (<div className='Home'>
-      <div className='navigation'>
-        <div className='navcontainer'>
-          <p>Tiny Client</p>
-        </div>
-      </div>
+      <Nav />
+      <Banner />
       <div className='content'>
         <div className='leftcontent'>
           <UserInfo actions={this.props.actions} user={this.props.user} />
