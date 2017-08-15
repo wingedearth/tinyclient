@@ -7,7 +7,6 @@ import actions from '../../redux/actions';
 import TextInput from '../Todo/TextInput';
 import TodoList from '../Todo/TodoList';
 import UserInfo from '../Todo/UserInfo';
-require('./Home.scss');
 
 const Nav = function (props) {
   return (<div className='navigation'>

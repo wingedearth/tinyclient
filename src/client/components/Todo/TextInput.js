@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-require('./css/TextInput.scss');
 
 class TextInput extends React.Component {
 

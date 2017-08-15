@@ -4,14 +4,14 @@
   font-size: 18px;
 }
 
-.navigation {
+.Home .navigation {
   width: 100%;
   background-color: #FAEBD7;
   text-decoration: none;
   height: 80px;
 }
 
-.navcontainer {
+.Home .navcontainer {
   font-family: 'Spectral';
   color: #CB4335;
   font-size: 20px;
@@ -19,12 +19,12 @@
   padding-top: 8px;
 }
 
-.content {
+.Home .content {
   margin: 0 2%;
   width: 100%;
 }
 
-.banner {
+.Home .banner {
   width: 100%;
   height: 300px;
   position: relative;
@@ -32,7 +32,7 @@
   overflow: hidden;
 }
 
-.bannerTitle {
+.Home .bannerTitle {
   font-family: "Open Sans";
   font-weight: 100;
   font-size: 60px;
@@ -42,13 +42,13 @@
   width: 100%;
 }
 
-.leftcontent {
+.Home .leftcontent {
   position: relative;
   display: inline-block;
   width: 48%;
 }
 
-.rightcontent {
+.Home .rightcontent {
   vertical-align: top;
   margin: 0 auto;
   position: relative;
