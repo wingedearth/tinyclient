@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-require('./css/TextInput.scss');
 
 class TextInput extends React.Component {
 
@@ -28,7 +27,7 @@ class TextInput extends React.Component {
   render () {
     return (
       <div className='TextInput'>
-        <div>TextInput Component</div>
+        <div>Enter Your Todo Here</div>
         <form onSubmit={this.handleSubmit}>
           <input
             className='textfield'

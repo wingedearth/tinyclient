@@ -1,0 +1,27 @@
+.Banner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.Banner .BannerBackground {
+  position: absolute;
+  width: 100%;
+  @include background('/src/assets/images/peacock3.jpg');
+}
+
+.Banner .BannerTitle {
+  position: relative;
+  font-family: "Open Sans";
+  font-weight: 100;
+  font-size: 60px;
+  line-height: 1;
+  color: #fff;
+  text-align: left;
+  margin-left: 25px;
+  margin-top: 200px;
+  text-shadow: 3px 3px black;
+  width: 100%;
+}

@@ -19,7 +19,8 @@ describe('Root Controller', function () {
     'redux': {createStore},
     'react-redux': {Provider},
     '../../client/components/Home': Home,
-    '../../client/redux/reducers': reducers
+    '../../client/redux/reducers': reducers,
+    '../../client/css/main.css': ''
   });
   const RootController = ProxiedRoot.default;
   const spy = sinon.spy(res, 'render');

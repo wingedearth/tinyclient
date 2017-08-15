@@ -3,11 +3,15 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import PropTypes from 'prop-types';
-import actions from '../../redux/actions';
-import TextInput from '../Todo/TextInput';
-import TodoList from '../Todo/TodoList';
-import UserInfo from '../Todo/UserInfo';
-require('./Home.scss');
+import actions from '../redux/actions';
+import TextInput from './Todo/TextInput';
+import TodoList from './Todo/TodoList';
+import UserInfo from './Todo/UserInfo';
+import Banner from './Banner';
+import Nav from './Nav';
+
+const navtext = 'Tiny Client';
+const bannertext = 'Tiny Client!';
 
 export class Home extends React.Component {
 
@@ -23,11 +27,8 @@ export class Home extends React.Component {
 
   render () {
     return (<div className='Home'>
-      <div className='navigation'>
-        <div className='navcontainer'>
-          <p>Tiny Client</p>
-        </div>
-      </div>
+      <Nav navtext={navtext} />
+      <Banner bannertext={bannertext} />
       <div className='content'>
         <div className='leftcontent'>
           <UserInfo actions={this.props.actions} user={this.props.user} />
