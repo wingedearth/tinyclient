@@ -8,37 +8,8 @@
 .Home {
 	font-size: 18px; }
 
-.Home .navigation {
-	width: 100%;
-	background-color: #FAEBD7;
-	text-decoration: none;
-	height: 80px; }
-
-.Home .navcontainer {
-	font-family: 'Spectral';
-	color: #CB4335;
-	font-size: 20px;
-	margin: 0px 10px 0 50px;
-	padding-top: 8px; }
-
 .Home .content {
 	margin: 0 2%;
-	width: 100%; }
-
-.Home .banner {
-	width: 100%;
-	height: 300px;
-	position: relative;
-	background: gray;
-	overflow: hidden; }
-
-.Home .bannerTitle {
-	font-family: "Open Sans";
-	font-weight: 100;
-	font-size: 60px;
-	line-height: 1;
-	color: #fff;
-	text-align: center;
 	width: 100%; }
 
 .Home .leftcontent {
@@ -57,16 +28,62 @@
 	color: brown;
 	margin: 45px 0px 0px 20px; }
 
-.textfield {
+.TextInput .textfield {
 	width: 300px;
 	height: 20px; }
 
-li {
+.TodoItem {
 	margin-bottom: 20px; }
+
+.TodoItem .TodoStatus {
+	font-size: 10px;
+	color: black;
+	margin-top: 4px;
+	margin-left: 2px; }
+
+.Banner {
+	width: 100%;
+	height: 300px;
+	position: relative;
+	overflow: hidden; }
+
+.Banner .BannerBackground {
+	position: absolute;
+	width: 100%;
+	background-image: url("/src/assets/images/peacock3.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover; }
+
+.Banner .BannerTitle {
+	position: relative;
+	font-family: "Open Sans";
+	font-weight: 100;
+	font-size: 60px;
+	line-height: 1;
+	color: #fff;
+	text-align: left;
+	margin-left: 25px;
+	margin-top: 200px;
+	text-shadow: 3px 3px black;
+	width: 100%; }
+
+.Navigation {
+	width: 100%;
+	background-color: #FAEBD7;
+	text-decoration: none;
+	height: 80px; }
+
+.Navigation .navcontainer {
+	font-family: 'Spectral';
+	color: #CB4335;
+	font-size: 20px;
+	margin: 0px 10px 0 50px;
+	padding-top: 8px; }
 
 body {
 	color: purple;
 	left: 0;
-	margin: -15px 0 0 0;
+	margin: -15px -18px 0 0;
 	padding: 0 0;
 	font-family: 'Helvetica'; }

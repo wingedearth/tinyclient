@@ -27,7 +27,7 @@ class TextInput extends React.Component {
   render () {
     return (
       <div className='TextInput'>
-        <div>TextInput Component</div>
+        <div>Enter Your Todo Here</div>
         <form onSubmit={this.handleSubmit}>
           <input
             className='textfield'

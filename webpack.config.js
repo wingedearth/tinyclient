@@ -21,7 +21,6 @@ const config = {
     path: path.join(__dirname, 'build'),
     filename: 'js/[name].js'
   },
-  watch: getWatchMode(),
   resolve: {
     modules: [
       path.join(__dirname, 'src'),
@@ -43,6 +42,7 @@ const frontend = _.merge({}, config, {
       './src/client/scss/main.scss'
     ]
   },
+  // watch: getWatchMode(),
   plugins: plugins.frontend
 });
 

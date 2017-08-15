@@ -1,10 +1,20 @@
 @import './fonts.scss';
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+        size: cover;
+    }
+}
+
 @import './imports.scss';
 
 body {
   color: purple;
   left: 0;
-  margin: -15px 0 0 0;
+  margin: -15px -18px 0 0;
   padding: 0 0;
   font-family: 'Helvetica';
 }

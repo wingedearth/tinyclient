@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path';
 import webpack from 'webpack';
 import router from './routes/router';
+import colors from 'colors';
 import webpackConfig from '../../webpack.config';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
@@ -32,5 +33,5 @@ server.use('/', router);
 
 server.listen(server.get('port'), exception => {
   if (exception) { throw exception; }
-  console.log('A goblin-mage has conjured a server on port', port);
+  console.log(`A goblin-mage has conjured a server on port ${port}`.green);
 });
