@@ -6,6 +6,14 @@ const _ = require('lodash');
 const rules = require('./webpack/rules');
 const plugins = require('./webpack/plugins');
 
+/**
+ * Determine whether webpack watch flag should be on based on ENVIRONMENT
+ * @returns {bool} true, unless process.env.ENVIRONMENT is 'production'
+ */
+function getWatchMode () {
+  return process.env.ENVIRONMENT !== 'production';
+}
+
 const config = {
   devtool: 'inline-source-map',
   output: {
@@ -13,6 +21,7 @@ const config = {
     path: path.join(__dirname, 'build'),
     filename: 'js/[name].js'
   },
+  watch: getWatchMode(),
   resolve: {
     modules: [
       path.join(__dirname, 'src'),
