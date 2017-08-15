@@ -1,6 +1,6 @@
 ## Change Log
 
-### upcoming (2017/07/17 14:57 +00:00)
+### v0.5.2 (2017/07/17 14:57 +00:00)
 - [#12](https://github.com/wingedearth/tinyclient/pull/12) Merge pull request #12 from wingedearth/feature/bug_fixes (@wingedearth)
 
 ### v0.5.1 (2017/07/17 14:56 +00:00)
