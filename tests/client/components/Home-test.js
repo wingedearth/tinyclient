@@ -9,7 +9,6 @@ import {
   TodoList,
   UserInfo,
   actions,
-  styles,
   todos,
   bindActionCreators,
   // mapDispatchToProps,
@@ -24,11 +23,10 @@ chai.use(chaiEnzyme());
 
 describe('<Home />', function () {
   const ProxiedHome = proxyquire('../../../src/client/components/Home', {
-    './Home.css': styles,
-    '../../redux/actions': actions,
-    '../Todo/TextInput': TextInput,
-    '../Todo/TodoList': TodoList,
-    '../Todo/UserInfo': UserInfo,
+    '../redux/actions': actions,
+    './Todo/TextInput': TextInput,
+    './Todo/TodoList': TodoList,
+    './Todo/UserInfo': UserInfo,
     'react-redux': {connect},
     'redux': {bindActionCreators}
   });
