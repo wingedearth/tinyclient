@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './css/TodoItem.css';
 
 class TodoItem extends React.Component {
 
@@ -19,10 +18,15 @@ class TodoItem extends React.Component {
     this.props.actions.deleteTodo(this.props.todo.id);
   }
 
+  getCompletedStatus () {
+    return this.props.todo.completed ? 'Completed' : 'Not Completed';
+  }
+
   render () {
     return (
-      <li>
-        <div>{this.props.todo.text}</div>
+      <li className='TodoItem'>
+        <div className='TodoText'>{this.props.todo.text}</div>
+        <div className='TodoStatus'>{this.getCompletedStatus()}</div>
         <button onClick={this.handleComplete}>Mark as completed</button>
         <button onClick={this.handleDelete}>Delete Item</button>
       </li>

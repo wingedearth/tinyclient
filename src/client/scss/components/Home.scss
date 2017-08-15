@@ -1,0 +1,22 @@
+.Home {
+  font-size: 18px;
+}
+
+.Home .content {
+  margin: 0 2%;
+  width: 100%;
+}
+
+.Home .leftcontent {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}
+
+.Home .rightcontent {
+  vertical-align: top;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}

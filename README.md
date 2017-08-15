@@ -2,16 +2,16 @@
 A template for a universal JavaScript client application with a custom server.
 
 ## Technologies
-..* Node.js
-..* Express.js
-..* JavaScript ES2015
-..* React
-..* Redux
-..* Webpack
-..* Testing suite: NYC / Chai / Mocha / Sinon / Istanbul
-..* EJS templating
-..* Lodash
-..* React hot-loading
+* Node.js
+* Express.js
+* JavaScript ES2015
+* React
+* Redux
+* Webpack
+* Testing suite: NYC / Chai / Mocha / Sinon / Istanbul
+* EJS templating
+* Lodash
+* React hot-loading
 
 ## Testing
 Test repo:

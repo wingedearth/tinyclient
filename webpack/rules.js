@@ -14,8 +14,13 @@ const cssRule = {
   })
 };
 
+const sassRule = {
+  test: /\.(sass|scss)$/,
+  use: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+};
+
 const rules = [
-  jsRule, cssRule
+  jsRule, cssRule, sassRule
 ];
 
 module.exports = rules;

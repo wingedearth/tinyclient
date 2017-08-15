@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path';
 import webpack from 'webpack';
 import router from './routes/router';
+import colors from 'colors';
 import webpackConfig from '../../webpack.config';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
@@ -19,12 +20,12 @@ server.use(webpackDevMiddleware(compiler, {
 server.use(webpackHotMiddleware(compiler, {
   log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
 }));
-server.use(express.static(path.resolve(__dirname, '..')));
-server.use(express.static(path.resolve(__dirname, '..', 'assets')));
+server.use(express.static(path.resolve(__dirname, '..', '..')));
+server.use(express.static(path.resolve(__dirname, '..', '..', 'assets')));
 server.use(express.static('./build'));
 server.set('port', port);
 server.set('view engine', 'ejs');
-server.set('views', path.join(__dirname, '..', 'src', 'assets', 'templates'));
+server.set('views', path.join(__dirname, '..', '..', 'src', 'assets', 'templates'));
 require('ejs').delimiter = '%';
 
 // Attach router
@@ -32,5 +33,5 @@ server.use('/', router);
 
 server.listen(server.get('port'), exception => {
   if (exception) { throw exception; }
-  console.log('A goblin-mage has conjured a server on port', port);
+  console.log(`A goblin-mage has conjured a server on port ${port}`.green);
 });
