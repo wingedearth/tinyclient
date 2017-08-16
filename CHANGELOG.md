@@ -1,5 +1,8 @@
 ## Change Log
 
+### upcoming (2017/08/16 00:08 +00:00)
+- [#14](https://github.com/wingedearth/tinyclient/pull/14) Merge pull request #14 from wingedearth/feature/basic_layout (@wingedearth)
+
 ### v0.5.2 (2017/07/17 14:57 +00:00)
 - [#12](https://github.com/wingedearth/tinyclient/pull/12) Merge pull request #12 from wingedearth/feature/bug_fixes (@wingedearth)
 
