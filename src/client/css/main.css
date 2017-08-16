@@ -5,6 +5,60 @@
 	src: local("Spectral"), local("Spectral-Regular"), url(https://fonts.gstatic.com/s/spectral/v1/He_vQncVabw6pF26p40JY3YhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+	 --modified
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block; }
+
+body {
+	line-height: 1;
+	color: purple;
+	left: 0;
+	margin: -15px -18px 0 0;
+	padding: 0 0;
+	font-family: 'Helvetica'; }
+
+ol, ul {
+	list-style: none; }
+
+blockquote, q {
+	quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none; }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0; }
+
 .Home {
 	font-size: 18px; }
 
@@ -24,22 +78,18 @@
 	display: inline-block;
 	width: 48%; }
 
-.TextInput {
-	color: brown;
-	margin: 45px 0px 0px 20px; }
+.Navigation {
+	width: 100%;
+	background-color: #FAEBD7;
+	text-decoration: none;
+	height: 80px; }
 
-.TextInput .textfield {
-	width: 300px;
-	height: 20px; }
-
-.TodoItem {
-	margin-bottom: 20px; }
-
-.TodoItem .TodoStatus {
-	font-size: 10px;
-	color: black;
-	margin-top: 4px;
-	margin-left: 2px; }
+.Navigation .navcontainer {
+	font-family: 'Spectral';
+	color: #CB4335;
+	font-size: 20px;
+	margin: 0px 10px 0 50px;
+	padding-top: 8px; }
 
 .Banner {
 	width: 100%;
@@ -68,22 +118,19 @@
 	text-shadow: 3px 3px black;
 	width: 100%; }
 
-.Navigation {
-	width: 100%;
-	background-color: #FAEBD7;
-	text-decoration: none;
-	height: 80px; }
+.TextInput {
+	color: brown;
+	margin: 45px 0px 0px 20px; }
 
-.Navigation .navcontainer {
-	font-family: 'Spectral';
-	color: #CB4335;
-	font-size: 20px;
-	margin: 0px 10px 0 50px;
-	padding-top: 8px; }
+.TextInput .textfield {
+	width: 300px;
+	height: 20px; }
 
-body {
-	color: purple;
-	left: 0;
-	margin: -15px -18px 0 0;
-	padding: 0 0;
-	font-family: 'Helvetica'; }
+.TodoItem {
+	margin-bottom: 20px; }
+
+.TodoItem .TodoStatus {
+	font-size: 10px;
+	color: black;
+	margin-top: 4px;
+	margin-left: 2px; }
