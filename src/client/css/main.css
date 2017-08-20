@@ -1,15 +1,6 @@
-@font-face {
-	font-family: 'Spectral';
-	font-style: normal;
-	font-weight: 400;
-	src: local("Spectral"), local("Spectral-Regular"), url(https://fonts.gstatic.com/s/spectral/v1/He_vQncVabw6pF26p40JY3YhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
-
-	 --modified
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -37,27 +28,21 @@ footer, header, hgroup, menu, nav, section {
 	display: block; }
 
 body {
-	line-height: 1;
+	line-height: 1; }
+
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-weight: 400;
+	src: local("Spectral"), local("Spectral-Regular"), url(https://fonts.gstatic.com/s/spectral/v1/He_vQncVabw6pF26p40JY3YhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+body {
 	color: purple;
 	left: 0;
 	margin: -15px -18px 0 0;
 	padding: 0 0;
 	font-family: 'Helvetica'; }
-
-ol, ul {
-	list-style: none; }
-
-blockquote, q {
-	quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none; }
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0; }
 
 .Home {
 	font-size: 18px; }
