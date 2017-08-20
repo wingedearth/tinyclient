@@ -1,6 +1,6 @@
 {
   "name": "tinyclient",
-  "version": "0.6.4",
+  "version": "0.6.3",
   "description": "a tiny client",
   "scripts": {
     "build": "webpack --colors",
@@ -10,6 +10,7 @@
     "dev": "ENVIRONMENT=default npm run build:watch & ENVIRONMENT=default npm start",
     "prebuild": "npm run clean",
     "predev": "npm run sass:watch & ENVIRONMENT=default npm run build",
+    "postversion": "git push && git push --tags",
     "prod": "npm run sass && ENVIRONMENT=production npm run build && ENVIRONMENT=production npm start",
     "sass": "node-sass --output-style nested --indent-type tab --indent-width 1 ./src/client/scss/main.scss ./src/client/css/main.css",
     "sass:watch": "npm run sass -- -w ./src/client/scss",
