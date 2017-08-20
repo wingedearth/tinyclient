@@ -11,3 +11,11 @@ body {
   padding: 0 0;
   font-family: 'Helvetica';
 }
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
