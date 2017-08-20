@@ -2,7 +2,7 @@ import {renderToString} from 'react-dom/server';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import React from 'react';
-import Home from '../../client/components/Home';
+import Home from '../../client/components/Home.js';
 import reducers from '../../client/redux/reducers';
 
 require('../../client/css/main.css');
